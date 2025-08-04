@@ -1,0 +1,1899 @@
+
+/* -----------------------------------
+   ESTILOS ADICIONALES PARA SITIO TURÍSTICO
+----------------------------------- */
+
+/* Video de fondo */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+
+
+/* Ajustes para sección de bienvenidos con video */
+.bienvenidos {
+  position: relative;
+  background: none !important;
+}
+
+/* Estilos para el carrusel */
+.ultimos-proyectos {
+  background: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.ultimos-proyectos .owl-carousel .item {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.ultimos-proyectos .owl-carousel .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ultimos-proyectos .owl-carousel .item img {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ultimos-proyectos .owl-carousel .item h4 {
+  color: #12AFAF;
+  font-size: 1.2rem;
+}
+
+/* Ventana flotante de información */
+#ventana-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(170, 4, 148, 0.8), rgba(7, 83, 145, 0.8));
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#ventana-info.oculto {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#ventana-info:not(.oculto) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ventana-contenido {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.cerrar-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.cerrar-btn:hover {
+  color: #12AFAF;
+}
+
+.-contenido .info {
+  display: none;
+}
+
+
+/* Estilos para el mapa */
+.embed-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Galería de fotos */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.img-fluid.rounded.shadow {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.img-fluid.rounded.shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+
+/* Modal mejorado con nuevas dimensiones */
+.modal-galeria {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 500px;
+  background: #000;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-contenido {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cerrar-modal:hover {
+  background: rgba(170, 4, 148, 0.8);
+  transform: rotate(90deg);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-nav-btn:hover {
+  background: rgba(170, 4, 148, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-nav-btn:first-child {
+  left: 20px;
+}
+
+.modal-nav-btn:last-child {
+  right: 20px;
+}
+
+#caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 1100px) {
+  .modal-content-container {
+    width: 90vw;
+    height: 45vw; /* Mantiene relación 1000x500 (500/1000 = 0.5) */
+  }
+  
+  .cerrar-modal {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  
+  .modal-nav-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  #caption {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+
+/* Estilos para iconos de servicios */
+.servicios img {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .ventana-contenido {
+      width: 95%;
+      padding: 1.5rem;
+  }
+  
+  .modal-contenido {
+      width: 95%;
+  }
+  
+  .ultimos-proyectos .owl-carousel .item {
+      margin: 0.2rem;
+  }
+  
+  .tu-mejor-eleccion ul li {
+      margin-bottom: 1.5rem;
+  }
+}
+
+/* Animación para ventana emergente */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+
+/* -----------------------------------
+   ESTILOS PARA SECCIÓN LUGARES DESTACADOS
+----------------------------------- */
+
+.lugares-destacados {
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* Divisor personalizado */
+.divider-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: currentColor;
+  border-radius: 1rem;
+}
+
+.divider-custom-icon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #12AFAF;
+}
+
+/* Tarjetas de lugares */
+.card-lugar {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.card-lugar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-lugar:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-img-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  padding: 1rem;
+}
+
+.badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-lugar h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn-outline-primary {
+  border-color: #12AFAF;
+  color: #12AFAF;
+}
+
+.btn-outline-primary:hover {
+  background-color: #12AFAF;
+  color: white;
+}
+
+/* Frase destino */
+.frase-destino {
+  position: relative;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.frase-destino::before,
+.frase-destino::after {
+  content: '"';
+  color: #12AFAF;
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.frase-destino::before {
+  margin-right: 0.25rem;
+}
+
+.frase-destino::after {
+  margin-left: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .card-img-container {
+      height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divider-custom-line {
+      max-width: 4rem;
+  }
+  
+  .divider-custom-icon {
+      font-size: 1.5rem;
+  }
+  
+  .frase-destino {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-container {
+      height: 200px;
+  }
+}
+
+
+/* -----------------------------------
+   ESTILOS GASTRONOMÍA MODERNA
+----------------------------------- */
+
+.gastronomia-tradicional {
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* Divisor personalizado */
+.divider-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.divider-custom.divider-primary .divider-custom-line {
+  background-color: #12AFAF;
+}
+
+.divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+}
+
+.divider-custom-icon {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #036e6e;
+}
+
+/* Contenido gastronómico */
+.gastronomia-item {
+  transition: all 0.3s ease;
+}
+
+.gastronomia-content {
+  padding: 2rem;
+}
+
+.gastronomia-content h3 {
+  color: #aa0494;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.gastronomia-content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: #12AFAF;
+}
+
+.gastronomia-img {
+  transition: all 0.5s ease;
+  height: 350px;
+  overflow: hidden;
+}
+
+.gastronomia-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gastronomia-item:hover .gastronomia-img img {
+  transform: scale(1.05);
+}
+
+.list-unstyled i {
+  color: #12AFAF;
+  width: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gastronomia-img {
+      height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divider-custom-line {
+      max-width: 4rem;
+  }
+  
+  .divider-custom-icon {
+      font-size: 1.5rem;
+  }
+  
+  .gastronomia-content {
+      padding: 1rem 0;
+  }
+  
+  .gastronomia-img {
+      height: 250px;
+      margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gastronomia-img {
+      height: 200px;
+  }
+}
+
+/* -----------------------------------
+   ESTILOS EXPERIENCIAS ÚNICAS
+----------------------------------- */
+
+.experiencias {
+  background: linear-gradient(to bottom, #000000 0%, #030303 100%);
+  position: relative;
+}
+
+/* ESTILOS ACTUALIZADOS PARA LAS TARJETAS DE TRADICIONES */
+.card-experiencia {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #61665c; /* Color de fondo solicitado */
+  background-image: url('../img/form-pattern.png'); /* Patrón tradicional */
+  background-repeat: repeat;
+  background-size: 200px;
+  background-blend-mode: multiply;
+  height: 100%;
+  cursor: pointer;
+  color: white; /* Texto en blanco */
+}
+
+.card-experiencia:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-experiencia-img {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 3px solid #aa0494; /* Borde morado inferior */
+}
+
+.card-experiencia-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-experiencia:hover .card-experiencia-img img {
+  transform: scale(1.1);
+}
+
+.card-experiencia-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.card-experiencia:hover .card-experiencia-overlay {
+  background: rgba(170, 4, 148, 0.7); /* Morado al hover */
+}
+
+.card-experiencia-overlay i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.card-experiencia:hover .card-experiencia-overlay i {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #fbca08; /* Amarillo al hover */
+}
+
+.card-experiencia-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* ESTILO ACTUALIZADO PARA EL CUERPO DEL TEXTO */
+.card-experiencia-body {
+  padding: 1.5rem;
+  background-color: transparent !important; /* Fondo transparente */
+  backdrop-filter: none !important; /* Elimina el filtro de blur */
+}
+
+.card-experiencia-body p {
+  color: white !important; /* Texto blanco */
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  min-height: 60px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-align: justify;
+  background-color: transparent !important; /* Asegura transparencia */
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-duration {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.badge-group {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.badge-food {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.badge-season {
+  background-color: #f3e5f5;
+  color: #8e24aa;
+}
+
+/* Modal de video */
+.modal-video {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  transition: all 0.3s ease;
+}
+
+.modal-video-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: modalFadeIn 0.3s;
+}
+
+.cerrar-btn {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  display: block;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.cerrar-btn:hover {
+  color: white;
+  background-color: #12AFAF;
+  border-color: #12AFAF;
+}
+
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .card-experiencia-img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-experiencia-overlay h3 {
+      font-size: 1.3rem;
+  }
+  
+  .modal-video-content {
+      width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-experiencia-img {
+      height: 180px;
+  }
+  
+  .card-experiencia-body p {
+      min-height: auto;
+  }
+  
+  .modal-video-content {
+      width: 95%;
+      padding: 10px;
+  }
+  
+  .close-video {
+      top: -30px;
+      font-size: 30px;
+  }
+}
+
+/* Estilos para el modal de video */
+.modal-video {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  transition: all 0.3s ease;
+}
+
+.modal-video-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close-video {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close-video:hover {
+  color: #12AFAF;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-video-content {
+      width: 95%;
+      padding: 10px;
+  }
+  
+  .close-video {
+      top: -35px;
+      font-size: 30px;
+  }
+}
+
+/* -----------------------------------
+   ESTILOS GUÍA INTERACTIVA
+----------------------------------- */
+
+/* Fondo para la guía interactiva */
+.guia-interactiva {
+  position: relative;
+  background-color: #000 !important;
+  background-image: url('../img/footer-form-bg.png') !important;
+  background-repeat: repeat !important;
+  min-height: 100vh; /* Ajusta según necesites */
+}
+
+/* Capa para ajustar opacidad del patrón (opcional) */
+.guia-interactiva::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/footer-form-bg.png') repeat;
+  opacity: 0.2; /* Ajusta la intensidad del patrón (0 a 1) */
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede encima */
+.guia-interactiva > * {
+  position: relative;
+  z-index: 1;
+} 
+/* Lista de lugares */
+.lugares-lista .list-group-item {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  margin-bottom: 0.5rem;
+  border-radius: 5px !important;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lugares-lista .list-group-item:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+.lugares-lista .active-lugar {
+  background-color: #12AFAF !important;
+  border-color: #12AFAF !important;
+  font-weight: 600;
+}
+
+.lugares-lista i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Mapa interactivo */
+.mapa-container {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border: 3px solid white;
+}
+
+.mapa-iframe {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(30%) contrast(110%) brightness(90%);
+}
+
+.mapa-marcador {
+  position: absolute;
+  color: #ff4757;
+  font-size: 2rem;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.mapa-marcador:hover {
+  color: #ff6b81;
+  transform: translate(-50%, -100%) scale(1.2);
+}
+
+.mapa-marcador.active {
+  color: #12AFAF;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -100%) scale(1); }
+  50% { transform: translate(-50%, -100%) scale(1.2); }
+  100% { transform: translate(-50%, -100%) scale(1); }
+}
+
+/* Info card */
+.info-lugar-card {
+  background-color: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-lugar-card .card-title {
+  color: #2c3e50;
+  border-bottom: 2px solid #12AFAF;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mapa-container {
+      height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapa-container {
+      height: 350px;
+  }
+  
+  .lugares-lista .list-group-item {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .mapa-container {
+      height: 300px;
+  }
+}
+
+
+/* Estilos para la galería mejorada */
+.gallery-section {
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image-container img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 175, 175, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+.gallery-caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.gallery-caption p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+
+
+/* Agrega esto a tu archivo estilos.css */
+.texto-encabezado img {
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+  transition: all 0.3s ease;
+}
+
+.texto-encabezado img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Loader Styles */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  text-align: center;
+  color: white;
+}
+
+.loader-logo {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.loader-logo img {
+  max-height: 80px;
+}
+
+.loader-spinner {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border-top: 5px solid #12AFAF;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.loader-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Sección de Bienvenida */
+.pantalla {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* posicionar texto abajo */
+  justify-content: flex-start; /* posición inicial a la izquierda */
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 2rem;
+  color: white;
+}
+
+.contenido h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #12AFAF;
+  margin-bottom: 0.5rem;
+}
+
+.contenido p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Fondo negro degradado solo debajo del texto */
+/* Reemplaza el estilo actual del ::after */
+.pantalla::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90%; /* Aumenté de 50% a 70% para hacerlo más grande */
+  width: 100%;
+  background: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 0.9),  /* Hice más oscuro cambiando de 0.6 a 0.8 */
+    transparent
+  );
+  z-index: 1;
+  pointer-events: none; /* Permite hacer clic en el contenido */
+}
+
+/* Opcional: Añade este estilo para mejorar la legibilidad del texto */
+.contenido {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 5rem; /* Asegura espacio entre texto y fondo */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Mejor contraste */
+}
+
+/* Ajustar alternancia izquierda/derecha */
+.pantalla .contenido.esquina {
+  margin: 2rem;
+}
+
+.pantalla:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.pantalla:nth-child(even) .contenido.esquina {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pantalla {
+    background-attachment: scroll;
+    align-items: flex-end;
+  }
+
+  .contenido {
+    max-width: 100%;
+    text-align: center !important;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.linea-separadora {
+  height: 10px;
+  background-color: black;
+  width: 100%;
+}
+
+
+
+/* Sección Reconocimientos Simple */
+.reconocimientos-simple {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.reconocimiento-imagen-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.reconocimiento-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.reconocimiento-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(170, 4, 148, 0.8), rgba(7, 83, 145, 0.8));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px;
+  transform: translateY(20px);
+  transition: transform 0.5s ease;
+}
+
+.overlay-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-text {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Efectos hover */
+.reconocimiento-imagen-container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.reconocimiento-imagen-container:hover .reconocimiento-imagen {
+  transform: scale(1.03);
+}
+
+.reconocimiento-imagen-container:hover .reconocimiento-overlay {
+  opacity: 1;
+}
+
+.reconocimiento-imagen-container:hover .overlay-content {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay-title {
+      font-size: 1.8rem;
+  }
+  
+  .overlay-text {
+      font-size: 1rem;
+  }
+}
+
+/* Footer compacto */
+.piedepagina-compacto {
+    background-color: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+.footer-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.redes-sociales-compactas {
+    padding: 0;
+}
+
+.redes-sociales-compactas a {
+    color: #777;
+    font-size: 1rem;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.redes-sociales-compactas a:hover {
+    color: #12AFAF;
+    text-decoration: none;
+}
+
+.legal-links a {
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #12AFAF;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .piedepagina-compacto .row > div {
+        text-align: center !important;
+    }
+    
+    .piedepagina-compacto .d-flex {
+        justify-content: center !important;
+    }
+}
+
+#reconocimientos .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+#reconocimientos .divider-custom-icon,
+#reconocimientos .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+
+#bienvenida .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+#bienvenida .divider-custom-icon,
+#bienvenida .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+
+#lugares .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+
+#lugares .divider-custom-icon,
+#lugares .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+#ventana-info-gastronomia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(170, 4, 148, 0.8), rgba(7, 83, 145, 0.8));
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#ventana-info-gastronomia:not(.oculto) {
+  opacity: 1;
+  visibility: visible;
+}
+
+#ventana-info-gastronomia .ventana-contenido {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#experiencias .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+#experiencias .divider-custom-icon,
+#experiencias .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+
+
+#guia .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+#guia .divider-custom-icon,
+#guia .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+
+#galeria .divider-custom-line {
+  background-color: #fbca08 !important;
+}
+
+#galeria .divider-custom-icon,
+#galeria .divider-custom-icon i {
+  color: #fbca08 !important;
+}
+
+
+
+#lugares {
+  background-color: #000000 !important;
+}
+
+.ultimos-proyectos {
+  background-color: #000000 !important;
+}
+
+#gastronomia {
+  background-color: #000000 !important;
+}
+
+#experiencias {
+  background-color: #000000 !important;
+}
+
+#galeria {
+  background-color: #000000 !important;
+}
+
+
+.btn-morado {
+  border-color: #aa0494 !important;
+  color: #aa0494 !important;
+}
+
+.btn-morado:hover {
+  background-color: #aa0494 !important;
+  color: #ffffff !important;
+}
+/* Ventana flotante para el carrusel */
+#ventana-info-carrusel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(170, 4, 148, 0.8), rgba(7, 83, 145, 0.8));
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#ventana-info-carrusel.oculto {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#ventana-info-carrusel:not(.oculto) {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* El resto de estilos puede compartir las mismas clases que la otra ventana */
+
+/* Justificar texto dentro de ventanas flotantes */
+#ventana-info .info p,
+#ventana-info .info ul,
+#ventana-info-carrusel .info p,
+#ventana-info-carrusel .info ul {
+    text-align: justify;
+}
+
+/* Centrar imágenes dentro de ventanas flotantes */
+/* Ajuste uniforme para imágenes dentro de ventanas flotantes */
+#ventana-info .info img,
+#ventana-info-gastronomia .info img,
+#ventana-info-carrusel .info img {
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Fuerza el ancho al contenedor */
+    aspect-ratio: 16 / 9; /* Forma rectangular (puedes ajustar a 4/3 si prefieres) */
+    object-fit: cover; /* Mantiene proporción sin deformar */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 7px; /* Opcional: bordes ligeramente redondeados */
+
+}
+
+.texto-justificado {
+  text-align: justify;
+}
+
+.img-esquinas-curvas {
+  border-radius: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+}
+
+.gallery-item:hover .gallery-image-container img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 175, 175, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+.gallery-caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.gallery-caption p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+
+
+/* Ajustar para que comience después de Nuestros Reconocimientos */
+#reconocimientos {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+#reconocimientos::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: url('img/borde-tradicional.png');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+/* Agrega esto en estilos 2.css */
+/* Elimina o reemplaza tus estilos anteriores de .card-lugar con esto: */
+.card-lugar {
+  background-color: #61665c;
+  background-image: url('../img/form-pattern.png');
+  background-repeat: repeat;
+  background-size: 200px;
+  background-blend-mode: multiply;
+  color: white; /* Texto blanco garantizado */
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  border: none !important; /* Elimina cualquier borde incluido el rojo */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el texto - blanco con sombra para mejor legibilidad */
+.card-lugar h3,
+.card-lugar h5,
+.card-lugar .card-text {
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Elimina el pseudo-elemento de depuración si lo habías agregado */
+.card-lugar::after {
+  display: none;
+}
+
+/* Estilo para el botón */
+.btn-morado {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white !important;
+  transition: all 0.3s ease;
+  position: relative; /* Necesario para el pseudo-elemento */
+  overflow: hidden; /* Oculta el efecto que se desborde */
+  z-index: 1; /* Asegura que el texto esté sobre el efecto */
+}
+
+.btn-morado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: -1; /* Lo coloca detrás del texto */
+}
+
+.btn-morado:hover {
+  color: #aa0494 !important;
+}
+
+.btn-morado:hover::before {
+  transform: translateX(0);
+}
+
+
+/* Estilos para el botón flotante - solo imagen */
+.btn-flotante-facebook {
+  position: fixed;
+  bottom: 70px; /* Ajusta según la posición de tu flecha */
+  right: 15px;
+  width: auto; /* Ancho según imagen */
+  height: auto; /* Alto según imagen */
+  z-index: 999;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  transform: translateY(0);
+  background: transparent !important; /* Fondo transparente */
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+.img-btn-facebook {
+  width: 50px; /* Ajusta según el tamaño deseado */
+  height: auto;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.btn-flotante-facebook:hover .img-btn-facebook {
+  opacity: 1;
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+
+/* Efecto al hacer clic */
+.btn-flotante-facebook:active .img-btn-facebook {
+  transform: scale(0.95);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .img-btn-facebook {
+    width: 40px;
+  }
+}
+/* Estilo para justificar el texto en todas las ventanas flotantes */
+#ventana-info .info p,
+#ventana-info-carrusel .info p,
+#ventana-info-gastronomia .info p,
+#ventana-info .info ul,
+#ventana-info-carrusel .info ul,
+#ventana-info-gastronomia .info ul {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Mejorar la legibilidad del texto justificado */
+#ventana-info .info,
+#ventana-info-carrusel .info,
+#ventana-info-gastronomia .info {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Asegurar que las imágenes no rompan el flujo del texto */
+#ventana-info .info img,
+#ventana-info-carrusel .info img,
+#ventana-info-gastronomia .info img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Contenedor del mapa */
+.mapa-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #12AFAF;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: white;
+}
+
+/* Estilos para los popups */
+.leaflet-popup-content {
+  min-width: 200px;
+  font-size: 14px;
+}
+
+.leaflet-popup-content b {
+  color: #12AFAF;
+}
+
+/* Lista de lugares */
+.lugares-lista .list-group-item {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s;
+}
+
+.lugares-lista .active-lugar {
+  background: #12AFAF !important;
+  border-color: #12AFAF !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mapa-container {
+      height: 350px;
+  }
+}
